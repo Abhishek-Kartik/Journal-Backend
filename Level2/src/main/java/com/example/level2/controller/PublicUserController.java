@@ -19,7 +19,7 @@ public class PublicUserController {
     private UserService userService;
 
     @GetMapping("/heath-check")
-    private String heathCheck(){
+    public String heathCheck(){
         logger.info("API is Working fine");
         return "OK";
     }
