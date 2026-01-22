@@ -17,7 +17,8 @@ target/
 logs/
 *.log
 /htmlReport
-application.properties
+# Ignore real config
+src/main/resources/application.properties
 
 ### IntelliJ IDEA ###
 .idea
