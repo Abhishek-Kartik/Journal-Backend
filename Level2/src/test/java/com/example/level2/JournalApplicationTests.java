@@ -8,10 +8,6 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 @SpringBootTest
 class JournalApplicationTests {
-    @Bean
-    public JavaMailSender javaMailSender() {
-        return new JavaMailSenderImpl(); // empty stub
-    }
 	@Test
 	void contextLoads() {
 	}
