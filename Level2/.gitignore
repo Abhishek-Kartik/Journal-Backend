@@ -13,9 +13,12 @@ target/
 .springBeans
 .sts4-cache
 *.yml
+# Logs
+logs/
 *.log
 /htmlReport
-application.properties
+# Ignore real config
+src/main/resources/application.properties
 
 ### IntelliJ IDEA ###
 .idea

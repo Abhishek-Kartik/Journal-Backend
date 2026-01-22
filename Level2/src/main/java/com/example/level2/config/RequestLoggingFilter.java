@@ -14,7 +14,7 @@ import java.io.IOException;
 @Component
 public class RequestLoggingFilter extends OncePerRequestFilter {
 
-    private static final Logger logger =
+    private static final Logger log =
             LoggerFactory.getLogger(RequestLoggingFilter.class);
 
     @Override
@@ -29,7 +29,7 @@ public class RequestLoggingFilter extends OncePerRequestFilter {
 
         long timeTaken = System.currentTimeMillis() - startTime;
 
-        logger.info("REQUEST method={} uri={} status={} time={}ms",
+        log.info("REQUEST method={} uri={} status={} time={}ms",
                 request.getMethod(),
                 request.getRequestURI(),
                 response.getStatus(),
