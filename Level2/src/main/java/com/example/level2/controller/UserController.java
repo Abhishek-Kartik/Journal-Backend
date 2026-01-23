@@ -59,13 +59,13 @@ public class UserController {
 
     @GetMapping("/quote")
     public ResponseEntity<QuoteEntity> getQuote() {
-        QuoteEntity[] quotes = quoteService.getQuotes();
-        if (quotes == null || quotes.length == 0) {
+        QuoteEntity quote = quoteService.getQuote();
+        if (quote == null) {
             return ResponseEntity.noContent().build();
         }
-
-        return ResponseEntity.ok(quotes[0]);
+        return ResponseEntity.ok(quote);
     }
+
 
     @PostMapping("/send")
     public ResponseEntity<String> sendEmail(@RequestParam @Email String email) {
